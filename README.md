@@ -4,7 +4,7 @@
 
 ## Welcome! 👋
 
-Live Site: (https://briuwu-bookmark-landing.netlify.app/)[https://briuwu-bookmark-landing.netlify.app/]
+Live Site: [https://briuwu-bookmark-landing.netlify.app/](https://briuwu-bookmark-landing.netlify.app/)
 
 ## Got feedback for us?
 
