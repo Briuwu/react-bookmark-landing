@@ -1,0 +1,30 @@
+@import './resets';
+@import './variables';
+@import './navbar';
+@import './header';
+@import './features';
+@import './extensions';
+@import './faq';
+@import './contact-us';
+@import './bookmark';
+
+// UNIVERSAL STYLES
+.container {
+  width: 90%;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.login-btn {
+  background-color: $soft-red;
+  padding: 0.5em 1.75em;
+  border-radius: 0.25em;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

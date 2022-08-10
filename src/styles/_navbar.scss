@@ -1,0 +1,91 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 2em;
+  z-index: 9999;
+
+  &-logo {
+    z-index: 9999;
+    cursor: pointer;
+  }
+
+  &-items {
+    display: flex;
+    gap: clamp(1em, 5vw, 3em);
+    align-items: center;
+
+    li, button {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    li {
+      cursor: pointer;
+
+      &:hover {
+        color: $soft-red;
+      }
+    }
+  }
+
+  .login-btn:hover {
+    outline: 2px solid $soft-red;
+    background-color: transparent;
+    color: $soft-red;
+  }
+
+  &-menu {
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar {
+    position: relative;
+
+    &-items {
+      display: none;
+
+      &.active {
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        inset: 0;
+        height: 100vh;
+
+        padding-top: 7em;
+        padding-inline: 2em;
+
+        background-color: rgba(37, 43, 70, 0.95);
+        color: white;
+
+        li {
+          text-align: center;
+          width: 100%;
+          border-top: 1px solid $grayish-blue;
+          padding-top: 2em;
+        }
+
+        .login-btn {
+          width: 100%;
+          text-align: center;
+          background-color: transparent !important;
+          outline: 2px solid white !important;
+
+          &:hover {
+            background-color: $soft-red;
+            outline: none;
+          }
+        }
+      }
+    }
+
+    &-menu {
+      display: block;
+    }
+  }
+}

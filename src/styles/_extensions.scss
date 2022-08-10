@@ -1,0 +1,89 @@
+.extensions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5em;
+
+  &-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: $grayish-blue;
+
+    &-title {
+      color: $very-dark-blue;
+      font-weight: 500;
+      font-size: 1.75rem;
+
+      margin-bottom: 0.5em;
+    }
+
+    &-desc {
+      max-width: 550px;
+    }
+  }
+
+  &-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+    margin-bottom: 5em;
+  }
+
+  &-each {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    padding-top: 4em;
+    color: $grayish-blue;
+    border-radius: 1em;
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    background-image: url('../images/bg-dots.svg');
+    background-repeat: repeat-x;
+    background-position-y: 70%;
+
+    &-title {
+      font-weight: 500;
+      color: $very-dark-blue;
+    }
+
+    &-ver {
+      margin-bottom: 4em;
+    }
+
+    button {
+      background-color: $soft-blue;
+      color: white;
+      font-weight: 500;
+      padding: 1em;
+      border-radius: 0.5em;
+    }
+
+    &-img {
+      margin-bottom: 2em;
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .extensions {
+    gap: 0;
+  }
+
+  .extensions-all {
+    flex-direction: row;
+  }
+
+  .extensions-each.Firefox {
+    margin-top: 5em;
+  }
+
+  .extensions-each.Opera {
+    margin-top: 10em;
+  }
+}

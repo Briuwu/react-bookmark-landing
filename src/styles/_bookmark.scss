@@ -1,0 +1,64 @@
+.bookmark {
+  background-color: $very-dark-blue;
+  color: white;
+  text-align: center;
+  padding-block: 2em;
+
+  &-logo {
+    cursor: pointer;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+
+  &-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    
+
+    li {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+
+      &:hover {
+        color: $soft-red;
+      }
+    }
+  }
+
+  &-links {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+
+    img:hover {
+      filter: invert(50%) sepia(17%) saturate(6569%) hue-rotate(330deg) brightness(112%) contrast(96%);
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .bookmark {
+
+    .container {
+      flex-direction: row;
+      gap: 5em;
+    }
+
+    &-items {
+      flex-direction: row;
+      gap: 3em;
+    }
+
+    &-links {
+      margin-left: auto;
+    }
+  }
+}

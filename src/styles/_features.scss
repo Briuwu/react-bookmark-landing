@@ -1,0 +1,157 @@
+.features {
+  position: relative;
+  margin-block: 3em;
+  color: $grayish-blue;
+
+  &-bg {
+    z-index: -1;
+    content: '';
+    background-color: $soft-blue;
+    width: 16em;
+    height: 12em;
+    border-top-right-radius: 5em;
+    border-bottom-right-radius: 5em;
+
+    position: absolute;
+    left: 0;
+    bottom: 10.5em;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1em;
+  }
+
+  &-title {
+    font-size: 2rem;
+    font-weight: 500;
+
+    color: $very-dark-blue;
+  }
+
+  &-desc {
+    margin-bottom: 1em;
+    max-width: 550px;
+  }
+
+  &-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    width: 100%;
+    padding-block: 1em;
+    border-block: 1px solid $grayish-blue;
+    
+    button {
+      color: $grayish-blue;
+      border-bottom: 1px solid $grayish-blue;
+      padding-bottom: 1em;
+      cursor: pointer;
+
+      &:hover {
+        color: $soft-red;
+      }
+    }
+
+    button.active {
+      color: $very-dark-blue;
+
+
+      background-image: linear-gradient($soft-red, $soft-red);
+      background-size: 45% 5px;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+    }
+
+    &:nth-child(3){
+      border-bottom: none;
+    }
+  }
+
+  &-tab {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+
+    img {
+      margin-block: 2em;
+    }
+
+    &-title {
+      font-size: 1.75rem;
+      color: $very-dark-blue;
+      font-weight: 500;
+    }
+
+    &-desc {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1em;
+
+      button {
+        padding: 0.75em 1.5em;
+        font-weight: 500;
+        border-radius: 0.5em;
+
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .features {
+    margin-block: 10em;
+
+    &-bg {
+      width: 32em;
+      height: 19em;
+      bottom: -2em;
+    }
+
+    &-btns {
+      justify-content: center;
+      flex-direction: row;
+
+      border: none;
+      gap: 2em;
+
+      button {
+        padding-inline: 2em;
+        border: none;
+
+        &.active {
+          background-size: 100% 5px;
+        }
+      }
+    }
+
+    &-tab {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+
+      &-title {
+        font-size: 2.25rem;
+      }
+
+      &-info {
+        font-size: 1.25rem;
+      }
+
+      &-desc {
+        text-align: left;
+        max-width: 600px;
+        align-items: flex-start;
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+.contact {
+  background-color: $soft-blue;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-block: 4em;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 500px;
+    text-align: center;
+  }
+
+  &-joined {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+
+  &-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    position: relative;
+
+    span {
+      display: none;
+    }
+
+    span.active {
+      display: block;
+      font-size: 0.75rem;
+      background-color: $soft-red;
+      width: 100%;
+      text-align: left;
+      padding-left: 1em;
+      padding-block: 0.25em;
+      font-style: italic;
+      border-bottom-left-radius: 0.5em;
+      border-bottom-right-radius: 0.5em;
+
+      position: absolute;
+      left: 0px;
+      top: 45px;
+    }
+
+    input {
+      padding: 0.75em;
+      border-radius: 0.25em;
+      font-size: 1rem;
+
+      &.active {
+        border: 2px solid $soft-red;
+      }
+
+      &::placeholder {
+        color: $grayish-blue;
+      }
+    }
+
+    button {
+      color: white;
+      background-color: $soft-red;
+      padding: 0.75em;
+      border-radius: 0.25em;
+      cursor: pointer;
+
+      &:hover {
+        outline: 2px solid $soft-red;
+        background-color: white;
+        color: $soft-red;
+      }
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .contact-title {
+    font-size: 1.75rem;
+  }
+
+  .contact-form {
+    justify-content: center;
+    flex-direction: row;
+
+    input {
+      width: 300px;
+    }
+
+    span.active {
+      width: 300px;
+      left: 22px;
+      bottom: -20px;
+    }
+  }
+
+}
